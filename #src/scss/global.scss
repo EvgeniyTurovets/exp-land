@@ -1,0 +1,270 @@
+$main-font: 'Montserrat', sans-serif;
+$sec-font: 'Roboto', sans-serif;
+
+// colors
+$prim-900: #0A243F;
+$prim-700: #092C9E;
+$prim-600: #0F47C0;
+$prim-400: #2B5CFB;
+$prim-200: #D0DBFF;
+$prim-100: #F4F7FF;
+
+$sec-900: #001828;
+$sec-200: #EAF6FF;
+$sec-100: #F1F6FA;
+
+$grey-900: #18171C;
+$grey-800: #262A39;
+$grey-500: #79758A;
+$grey-200: #D7D6DC;
+$grey-100: #F2F1F3;
+
+// fonts
+@mixin h1 {
+  font-size: 72px;
+  line-height: 76px;
+  @media (max-width: 768px) {
+    font-size: 40px;
+    line-height: 44px;
+  }
+}
+@mixin h2 {
+  font-size: 64px;
+  line-height: 68px;
+  @media (max-width: 768px) {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+@mixin h3 {
+  font-size: 48px;
+  line-height: 52px;
+  @media (max-width: 768px) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+@mixin h4 {
+  font-size: 32px;
+  line-height: 40px;
+  @media (max-width: 768px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+@mixin h5 {
+  font-size: 18px;
+  line-height: 28px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@mixin p1 {
+  font-size: 24px;
+  line-height: 36px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+@mixin p1-b {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+@mixin p2 {
+  font-size: 20px;
+  line-height: 32px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 28px;
+  }
+}
+@mixin p2-b {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 700;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 28px;
+  }
+}
+@mixin p3 {
+  font-size: 18px;
+  line-height: 28px;
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@mixin p3-b {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@mixin p4 {
+  font-size: 16px;
+  line-height: 24px;
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@mixin p4-b {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@mixin p5 {
+  font-size: 14px;
+  line-height: 20px;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+@mixin p5-b {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+@mixin link {
+  font-size: 18px;
+  line-height: 28px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+// buttons
+.btn-prim-small {
+  @include p5-b;
+  padding: 6px 20px;
+  color: #0A243F;
+  background-color: $sec-100;
+  border-radius: 20px;
+  border: none;
+  transition: all linear .2s;
+  &:hover {
+    color: #000;
+    background-color: $sec-200;
+  }
+}
+.btn-light-large {
+  padding: 8px 20px;
+  font-size: 20px;
+  line-height: 32px;
+  color: $grey-900;
+  font-weight: 700;
+  background-color: $grey-100;
+  border: 1px solid #D7D6DC;
+  border-radius: 20px;
+  transition: all linear 0.2s;
+  &:hover {
+    background-color: #fff;
+  }
+}
+.btn-sec-small {
+  padding: 6px 20px;
+  @include p4-b;
+  color: $prim-100;
+  background-color: $prim-600;
+  border-radius: 20px;
+  &:hover {
+    background-color: $prim-700;
+  }
+}
+.btn-white-large {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 20px;
+  line-height: 32px;
+  color: #2B5CFB;
+  font-weight: 700;
+  background-color: #fff;
+  border: 1px solid #D7D6DC;
+  border-radius: 20px;
+  transition: all linear 0.2s;
+  &:hover {
+    background-color: $grey-100;
+  }
+  @media (max-width: 1199px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (max-width: 768px) {
+    padding: 6px 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+// global
+html,
+body {
+	box-sizing: border-box;
+	height: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+	outline: transparent;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.content {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+body {
+	font-family: $main-font;
+	font-weight: 400;
+	@include p3;
+	color: $sec-900;
+}
+
+.container-large {
+  max-width: 1390px;
+  padding: 0 6px;
+  margin: 0 auto;
+}

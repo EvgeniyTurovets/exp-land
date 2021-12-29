@@ -1,0 +1,81 @@
+@include font("Montserrat", "Montserrat-ExtraBold", "800", "normal");
+@include font("Montserrat", "Montserrat-Bold", "700", "normal");
+@include font("Montserrat", "Montserrat-SemiBold", "600", "normal");
+@include font("Montserrat", "Montserrat-Regular", "400", "normal");
+
+@include font("Roboto", "Roboto-Bold", "700", "normal");
+
+
+@font-face {
+  font-family: 'custom-icons';
+  src:  url('../fonts/custom-icons.eot?a8mjz2');
+  src:  url('../fonts/custom-icons.eot?a8mjz2#iefix') format('embedded-opentype'),
+    url('../fonts/custom-icons.ttf?a8mjz2') format('truetype'),
+    url('../fonts/custom-icons.woff?a8mjz2') format('woff'),
+    url('../fonts/custom-icons.svg?a8mjz2#custom-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'custom-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fb:before {
+  content: "\e900";
+}
+.icon-instagram:before {
+  content: "\e901";
+}
+.icon-linkedin:before {
+  content: "\e902";
+}
+.icon-user:before {
+  content: "\e903";
+}
+.icon-star-fill:before {
+  content: "\e904";
+}
+.icon-star:before {
+  content: "\e905";
+}
+.icon-search:before {
+  content: "\e906";
+}
+.icon-location:before {
+  content: "\e907";
+}
+.icon-earth:before {
+  content: "\e908";
+}
+.icon-cloud:before {
+  content: "\e909";
+}
+.icon-check-small:before {
+  content: "\e90a";
+}
+.icon-check-big:before {
+  content: "\e90b";
+}
+.icon-chart:before {
+  content: "\e90c";
+}
+.icon-bookmark:before {
+  content: "\e90d";
+}
+.icon-bag:before {
+  content: "\e90e";
+}
+
