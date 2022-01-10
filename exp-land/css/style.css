@@ -641,6 +641,11 @@ body {
   margin: 0 auto;
 }
 
+.links__wrapper {
+  position: relative;
+  z-index: 1;
+}
+
 .authorization {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -666,12 +671,17 @@ body {
 }
 
 .header {
+  margin-top: 66px;
+}
+
+.header .header__fix {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 20;
   background-color: #fff;
+  opacity: 1;
 }
 
 .header__wrapper {
@@ -688,6 +698,14 @@ body {
 
 .header__logo {
   display: inline-block;
+  font-family: "Cabin", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1d4289;
+}
+
+.header__logo:hover {
+  color: #1d4289;
 }
 
 .header__logo-desktop {
@@ -2184,12 +2202,9 @@ body {
 }
 
 @media (max-width: 1399px) {
-  .header__logo-desktop {
-    display: none;
-  }
-
-  .header__logo-mobile {
-    display: inline-block;
+  .header__link {
+    font-size: 13px;
+    line-height: 19px;
   }
 
   .expert-card-1 {
@@ -2274,6 +2289,7 @@ body {
 
   .header__logo-desktop {
     display: inline-block;
+    height: 35px;
   }
 
   .header__logo-mobile {
@@ -3303,6 +3319,10 @@ body {
 }
 
 @media (max-width: 767px) {
+  .header {
+    margin-top: 50px;
+  }
+
   .header__wrapper {
     height: 50px;
   }
@@ -3314,8 +3334,12 @@ body {
     text-align: center;
   }
 
+  .header__logo {
+    font-size: 0;
+  }
+
   .header__logo-desktop {
-    display: none;
+    height: 30px;
   }
 
   .header__logo-mobile {

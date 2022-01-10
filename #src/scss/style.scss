@@ -37,6 +37,10 @@ $grid-gutter-width: 32px;
 
 // Стили
 // header
+.links__wrapper{
+  position: relative;
+  z-index: 1;
+}
 .authorization {
   display: flex;
   align-items: center;
@@ -56,12 +60,16 @@ $grid-gutter-width: 32px;
   }
 }
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 20;
-  background-color: #fff;
+  margin-top: 66px;
+  .header__fix{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background-color: #fff;
+    opacity: 1;
+  }
   &__wrapper {
     display: flex;
     align-items: center;
@@ -71,8 +79,14 @@ $grid-gutter-width: 32px;
   }
   &__logo {
     display: inline-block;
+    font-family: 'Cabin', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(29, 66, 137);
   }
-
+  &__logo:hover{
+    color: rgb(29, 66, 137);
+  }
   &__logo-desktop {
     height: 40px;
   }
@@ -98,7 +112,11 @@ $grid-gutter-width: 32px;
     transition: all linear 0.2s;
   }
 }
-
+@media(max-width: 767px){
+  .header{
+    margin-top: 50px;
+  }
+}
 .burger {
   padding: 0;
   margin-left: 16px;
@@ -149,13 +167,9 @@ $grid-gutter-width: 32px;
   left: 0;
 }
 @media (max-width: 1399px) {
-  .header__logo {
-    &-desktop {
-      display: none;
-    }
-    &-mobile {
-      display: inline-block;
-    }
+  .header__link{
+    font-size: 13px;
+    line-height: 19px;
   }
 }
 @media (max-width: 1199px) {
@@ -183,8 +197,10 @@ $grid-gutter-width: 32px;
     display: block;
   }
   .header__logo {
+   
     &-desktop {
       display: inline-block;
+      height: 35px;
     }
     &-mobile {
       display: none;
@@ -202,8 +218,9 @@ $grid-gutter-width: 32px;
     }
   }
   .header__logo {
+    font-size: 0;
     &-desktop {
-      display: none;
+      height: 30px;
     }
     &-mobile {
       display: inline-block;
