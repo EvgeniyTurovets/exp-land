@@ -398,12 +398,13 @@ $grid-gutter-width: 32px;
   text-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
   &:hover {
     .link__arrow {
-      margin-left: 20px;
+      transform: translateX(20px);
     }
   }
   &__arrow {
     font-size: 38px;
     margin: 0 0 -4px 12px;
+    transition: 0.3s all;
   }
 }
 .search {
@@ -2246,3 +2247,132 @@ $grid-gutter-width: 32px;
   }
 }
 
+@media(max-width: 660px){
+  .vacancy .card__wrapper{
+    padding: 16px 9px 35px;
+  }
+  .vacancy .card__heading{
+    margin-top: 0;
+  }
+  .card__profession{
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 14px;
+    font-weight: bold;
+    margin-bottom: 7px;
+  }
+  .card__statistics{
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    font-weight: 400;
+  }
+  .card__statistics-icon{
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .vacancy .card__statistics{
+    margin-top: 10px;
+  }
+  .vacancy .card__statistics+.card__statistics{
+    margin-top: 5px;
+  }
+  .card__tag{
+    margin-left: 0px;
+    margin-right: 6px;
+    font-weight: 600;
+    font-size: 6px;
+    line-height: 14px;
+    margin-bottom: 8px;
+    margin-top: 0;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  }
+  .card__tags{
+    margin: 0;
+    margin-top: 12px;
+  }
+  .vacancy .card__description{
+    margin-top: 12px;
+  }
+  .link__arrow{
+    font-size: 40px;
+    margin-left: 0;
+   
+  }
+  .vacancy .link{
+    font-size: 14px;
+    line-height: 28px;
+    margin-top: 12px;
+  }
+  .vacancy .card{
+    min-width: 256px;
+    max-width: 256px;
+  }
+  .vacancy  .swiper-slide {
+    width: auto;
+  }
+  
+
+  // .opportunities__card
+  .swiper-slide .opportunities__card{
+    min-width: 246px;
+    max-width: 246px;
+  }
+  .opportunities__link{
+    padding-top: 0;
+  }
+  .opportunities__slider .swiper-slide {
+    width: auto;
+  }
+
+  .best__slider{
+    .card__profession{
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+    }
+    .card__profession-icon{
+      font-weight: bold;
+    }
+    .card__img{
+      height: 62px;
+    }
+    .swiper-slide{
+      transform: scale(0.95);
+      min-width: 246px;
+      max-width: 246px;
+      box-sizing: border-box;
+    }
+    .swiper-slide.swiper-slide-active{
+      transform: scale(1);
+    }
+    .card__salary{
+      font-size: 8px;
+      line-height: 9px;
+    }
+    .card__grade-title{
+      width: 53px;
+    }
+    .card__location{
+      font-weight: bold;
+    }
+    .card__icon{
+      font-weight: 600;
+      font-size: 14px;
+      padding-bottom: 3px;
+    }
+    .card__statistics-icon{
+      width: 14px;
+      font-size: 14px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .card__statistics{
+      font-weight: 600;
+      margin-top: 0;
+    }
+    .card__description{
+      margin-top: 10px;
+    }
+  }
+}

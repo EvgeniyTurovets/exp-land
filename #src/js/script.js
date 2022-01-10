@@ -62,7 +62,7 @@ if (document.documentElement.clientWidth < 768) {
   const opportunitiesSlider = new Swiper('.opportunities__slider', {
     loop: true,
     centeredSlides: true,
-    slidesPerView: 1.1,
+    slidesPerView: 'auto',
     spaceBetween: 5,
     autoplay: {
       delay: 5000,
@@ -142,18 +142,10 @@ const bestSlider = new Swiper('.best__slider', {
   },
   breakpoints: {
     320: {
-      slidesPerView: 1.2,
-      spaceBetween: 12,
+      slidesPerView: 'auto',
+      spaceBetween: 5,
     },
-    480: {
-      slidesPerView: 1.8,
-      spaceBetween: 12,
-    },
-    640: {
-      slidesPerView: 2.1,
-      spaceBetween: 24,
-      spaceBetween: 12,
-    },
+    
     768: {
       slidesPerView: 2.05,
       spaceBetween: 12,
@@ -175,12 +167,12 @@ const bestSlider = new Swiper('.best__slider', {
 
 
 const vacancySlider = new Swiper('#vacancy__slider-mob', {
-  slidesPerView: 1.3,
+  slidesPerView: 'auto',
   centeredSlides: true,
-  spaceBetween: 10,
+  spaceBetween: 5,
   breakpoints: {
     575: {
-      slidesPerView: 2.2,
+      slidesPerView: 2.1,
       spaceBetween: 30,
     },
   }
