@@ -641,6 +641,10 @@ body {
   margin: 0 auto;
 }
 
+section {
+  background-color: #fff;
+}
+
 .links__wrapper {
   position: relative;
   z-index: 1;
@@ -668,6 +672,17 @@ body {
   background-color: transparent;
   border: none;
   margin: 0 12px;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.authorization__log-in:hover {
+  color: #0a58ca;
+}
+
+.authorization__sign-up:hover {
+  color: #0a58ca;
 }
 
 .header {
@@ -918,7 +933,7 @@ body {
 
 .preview {
   overflow: hidden;
-  padding-top: 138px;
+  padding-top: 24px;
   background-color: #F4F7FF;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
@@ -932,6 +947,7 @@ body {
 
 .preview__title {
   margin: 60px 0 0;
+  font-weight: bold;
   font-size: 64px;
   line-height: 68px;
 }
@@ -991,10 +1007,20 @@ body {
   text-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
 }
 
+.link .link__arrow svg path {
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
 .link:hover .link__arrow {
   -webkit-transform: translateX(20px);
       -ms-transform: translateX(20px);
           transform: translateX(20px);
+}
+
+.link:hover .link__arrow svg path {
+  fill: #0a4fb4;
 }
 
 .link__arrow {
@@ -1083,6 +1109,7 @@ body {
           box-sizing: border-box;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  border: none;
 }
 
 .search__btn:hover {
@@ -1110,8 +1137,8 @@ body {
   text-transform: uppercase;
   background-color: #fff;
   border-radius: 40px;
-  -webkit-box-shadow: 0px 0px 160px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 160px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .expert-card {
@@ -1209,6 +1236,7 @@ body {
 
 .opportunities {
   padding: 120px 0;
+  padding-bottom: 90px;
   background-color: #0F47C0;
 }
 
@@ -1242,6 +1270,7 @@ body {
 
 .opportunities__wrapper {
   margin-top: 80px;
+  padding-bottom: 35px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: justify;
@@ -1251,6 +1280,7 @@ body {
 
 .opportunities__slide {
   width: calc((100% - 36px) / 2);
+  height: auto;
 }
 
 .opportunities__slide:nth-child(n+3) {
@@ -1258,6 +1288,7 @@ body {
 }
 
 .opportunities__card {
+  min-height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 40px 42px 46px;
@@ -1294,7 +1325,6 @@ body {
 }
 
 .opportunities__text {
-  min-height: 189px;
   margin: 24px 0 0;
   color: #0A243F;
   -webkit-box-flex: 1;
@@ -1310,6 +1340,7 @@ body {
 }
 
 .advantages {
+  background-color: #fff;
   padding: 120px 12px;
 }
 
@@ -1698,10 +1729,14 @@ body {
   border-radius: 20px;
 }
 
+.best .swiper-slide.card {
+  width: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .card {
   max-width: 420px;
-  -webkit-box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.15);
   background-color: #F4F7FF;
   border-radius: 20px;
   color: #000;
@@ -1715,6 +1750,8 @@ body {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
+  -webkit-box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .card__top {
@@ -2154,6 +2191,7 @@ body {
 
 .vacancy__slider {
   position: relative;
+  min-height: 900px;
 }
 
 .vacancy__slider__row {
@@ -2469,6 +2507,48 @@ body {
 
   .contests__btn {
     margin-bottom: 80px;
+  }
+
+  .vacancy__slider {
+    min-height: initial;
+  }
+
+  .vacancy__slider.mob {
+    display: block;
+  }
+
+  .vacancy__slider .swiper-slide {
+    width: auto;
+  }
+
+  .vacancy__slider.des {
+    display: none;
+  }
+
+  .vacancy .swiper-slide .card {
+    width: auto;
+    height: auto;
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.35);
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.35);
+  }
+
+  .vacancy .card {
+    width: 100%;
+  }
+
+  .swiper-slide.swiper-slide-active .card {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+  }
+
+  .card:hover {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -2821,40 +2901,6 @@ body {
   .become__link {
     margin-top: 60px;
   }
-
-  .vacancy__slider.mob {
-    display: block;
-  }
-
-  .vacancy__slider.des {
-    display: none;
-  }
-
-  .vacancy .swiper-slide .card {
-    width: auto;
-    height: auto;
-    -webkit-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-            transform: scale(0.9);
-    -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.35);
-            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.35);
-  }
-
-  .vacancy .card {
-    width: 100%;
-  }
-
-  .swiper-slide.swiper-slide-active .card {
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
-  }
-
-  .card:hover {
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
-  }
 }
 
 @media (max-width: 991px) and (max-width: 768px) {
@@ -3078,6 +3124,10 @@ body {
     padding: 6px 20px;
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .best .swiper-slide.card {
+    max-width: 350px;
   }
 
   .card__top {
@@ -3388,11 +3438,11 @@ body {
   }
 
   .preview {
-    padding-top: 89px;
+    padding-top: 39px;
   }
 
   .preview__title {
-    margin-top: 28px;
+    margin-top: 0px;
   }
 
   .preview__subtitle {
@@ -3507,7 +3557,6 @@ body {
 
   .opportunities__text {
     margin-top: 10px;
-    min-height: 125px;
   }
 
   .opportunities__link {
@@ -3636,7 +3685,7 @@ body {
     height: 62px;
   }
 
-  .best__slider .swiper-slide {
+  .best__slider .swiper-slide.card {
     -webkit-transform: scale(0.95);
         -ms-transform: scale(0.95);
             transform: scale(0.95);

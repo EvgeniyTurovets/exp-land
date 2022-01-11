@@ -64,6 +64,7 @@ if (document.documentElement.clientWidth < 768) {
     centeredSlides: true,
     slidesPerView: 'auto',
     spaceBetween: 5,
+    pauseOnMouseEnter: true,
     autoplay: {
       delay: 5000,
     },
@@ -138,7 +139,7 @@ const bestSlider = new Swiper('.best__slider', {
   centeredSlides: true,
   pauseOnMouseEnter: true,
   autoplay: {
-    delay: 6000,
+    delay: 5000,
   },
   breakpoints: {
     320: {
@@ -146,20 +147,20 @@ const bestSlider = new Swiper('.best__slider', {
       spaceBetween: 5,
     },
     
-    768: {
-      slidesPerView: 2.05,
+    767: {
+      slidesPerView: 'auto',
       spaceBetween: 12,
     },
     991: {
-      slidesPerView: 3,
+      slidesPerView: 'auto',
       spaceBetween: 24,
     },
     1200: {
-      slidesPerView: 3.3,
+      slidesPerView: 'auto',
       spaceBetween: 32,
     },
     1441: {
-      slidesPerView: 3.3,
+      slidesPerView: 'auto',
       spaceBetween: 42,
     }
   }
@@ -170,12 +171,10 @@ const vacancySlider = new Swiper('#vacancy__slider-mob', {
   slidesPerView: 'auto',
   centeredSlides: true,
   spaceBetween: 5,
-  breakpoints: {
-    575: {
-      slidesPerView: 2.1,
-      spaceBetween: 30,
-    },
-  }
+  pauseOnMouseEnter: true,
+  autoplay: {
+    delay: 5000,
+  },
 });
 
 $('.card').on('mouseover', function () {
@@ -189,20 +188,18 @@ $('.card').on('mouseout', function () {
 });
 
 var controller = new ScrollMagic.Controller();
-var scene = new ScrollMagic.Scene({triggerElement: "#vacancy__slider", duration: 700})
-						.addTo(controller)
-            .on("progress", function (e) {
-              if(e.progress.toFixed(3) > 0.200){
-                $('#vacancy__slider__row1').addClass('active')
-              }else{
-                $('#vacancy__slider__row1').removeClass('active')
-              }
+var scene = new ScrollMagic.Scene({triggerElement: "#vacancy__slider", duration: 900})
+  .addTo(controller)
+  .on("progress", function (e) {
+    if(e.progress.toFixed(3) > 0.250){
+      $('#vacancy__slider__row1').addClass('active')
+    }else{
+      $('#vacancy__slider__row1').removeClass('active')
+    }
 
-              if(e.progress.toFixed(3) > 0.350){
-                $('#vacancy__slider__row2').addClass('active')
-              }else{
-                $('#vacancy__slider__row2').removeClass('active')
-              }
-
-              console.log(e.progress.toFixed(3))
-            });
+    if(e.progress.toFixed(3) > 0.500){
+      $('#vacancy__slider__row2').addClass('active')
+    }else{
+      $('#vacancy__slider__row2').removeClass('active')
+    }
+  });

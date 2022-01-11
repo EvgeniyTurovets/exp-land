@@ -34,6 +34,9 @@ $grid-gutter-width: 32px;
 
 @import 'fonts';
 @import 'global';
+section{
+  background-color: #fff;
+}
 
 // Стили
 // header
@@ -54,9 +57,13 @@ $grid-gutter-width: 32px;
     background-color: transparent;
     border: none;
     margin: 0 12px;
+    transition: 0.3s all;
   }
-  &__sign-up {
-    
+  &__log-in:hover{
+    color: #0a58ca;
+  }
+  &__sign-up:hover {
+    color: #0a58ca;
   }
 }
 .header {
@@ -356,7 +363,7 @@ $grid-gutter-width: 32px;
 // section preview
 .preview {
   overflow: hidden;
-  padding-top: 138px;
+  padding-top: 24px;
   background-color: #F4F7FF;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   &__content {
@@ -367,6 +374,8 @@ $grid-gutter-width: 32px;
 
   &__title {
     margin: 60px 0 0;
+    font-weight: bold;
+
     @include h2;
   }
 
@@ -413,9 +422,17 @@ $grid-gutter-width: 32px;
   font-weight: 700;
   color: $prim-400;
   text-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+  .link__arrow {
+    svg path{
+      transition: 0.3s all;
+    }
+  }
   &:hover {
     .link__arrow {
       transform: translateX(20px);
+      svg path{
+        fill: #0a4fb4;
+      }
     }
   }
   &__arrow {
@@ -470,6 +487,7 @@ $grid-gutter-width: 32px;
     background-color: #FCFCFC;
     box-sizing: border-box;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border: none;
     &:hover {
       background-color: $grey-100;
     }
@@ -491,7 +509,7 @@ $grid-gutter-width: 32px;
     text-transform: uppercase;
     background-color: #fff;
     border-radius: 40px;
-    box-shadow: 0px 0px 160px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
   }
 }
 .expert-card {
@@ -740,10 +758,10 @@ $grid-gutter-width: 32px;
 }
 @media (max-width: 767px) {
   .preview {
-    padding-top: 89px;
+    padding-top: 39px;
   }
   .preview__title {
-    margin-top: 28px;
+    margin-top: 0px;
   }
   .preview__subtitle {
     font-size: 12px;
@@ -821,6 +839,7 @@ $grid-gutter-width: 32px;
 // section opportunities
 .opportunities {
   padding: 120px 0;
+  padding-bottom: 90px;
   background-color: $prim-600;
   &__title {
     margin: 0;
@@ -846,18 +865,19 @@ $grid-gutter-width: 32px;
   }
   &__wrapper {
     margin-top: 80px;
-    
+    padding-bottom: 35px;
     flex-wrap: wrap;
     justify-content: space-between;
   }
   &__slide {
     width: calc((100% - 36px) / 2);
+    height: auto;
     &:nth-child(n+3) {
       margin-top: 105px;
     }
   }
   &__card {
-    
+    min-height: 100%;
     box-sizing: border-box;
     padding: 40px 42px 46px;
     background-color: #fff;
@@ -877,7 +897,6 @@ $grid-gutter-width: 32px;
     margin: 0;
   }
   &__text {
-    min-height: 189px;
     margin: 24px 0 0;
     color: $prim-900;
     flex: 1;
@@ -907,6 +926,7 @@ $grid-gutter-width: 32px;
     flex-wrap: nowrap;
     justify-content: start;
     margin-top: 40px;
+   
   }
   .opportunities__slide {
     &:nth-child(n+2) {
@@ -927,7 +947,6 @@ $grid-gutter-width: 32px;
   }
   .opportunities__text {
     margin-top: 10px;
-    min-height: 125px;
   }
   .opportunities__link {
     padding-top: 16px;
@@ -945,6 +964,7 @@ $grid-gutter-width: 32px;
 
 // section advantages
 .advantages {
+  background-color: #fff;
   padding: 120px 12px;
   &__row {
   }
@@ -1528,6 +1548,10 @@ $grid-gutter-width: 32px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
     border-radius: 20px
   }
+  .swiper-slide.card{
+    width: auto;
+    box-sizing: border-box;
+  }
 }
 @media (max-width: 991px) {
   .best {
@@ -1545,6 +1569,7 @@ $grid-gutter-width: 32px;
     &__slider {
       margin-top: 60px;
     }
+    
   }
 }
 @media (max-width: 768px) {
@@ -1569,12 +1594,16 @@ $grid-gutter-width: 32px;
       font-size: 14px;
       line-height: 20px;
     }
+
+    .swiper-slide.card{
+      max-width: 350px;
+    }
   }
 }
 
 .card {
   max-width: 420px;
-  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.15);
+  
   background-color: #F4F7FF;
   border-radius: 20px;
   color: #000;
@@ -1582,6 +1611,7 @@ $grid-gutter-width: 32px;
   transition: 0.3s all;
   &:hover {
     transform: scale(1.1);
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.15);
   }
   &__top {
     position: relative;
@@ -2193,6 +2223,7 @@ $grid-gutter-width: 32px;
 
 .vacancy__slider{
   position: relative;
+  min-height: 900px;
 }
 .vacancy__slider__row{
   display: flex;
@@ -2233,9 +2264,15 @@ $grid-gutter-width: 32px;
 .vacancy__slider.mob{
   display: none;
 }
-@media(max-width: 991px){
+@media(max-width: 1199px){
+  .vacancy__slider{
+    min-height: initial;
+  }
   .vacancy__slider.mob{
     display: block;
+  }
+  .vacancy__slider .swiper-slide{
+    width: auto;
   }
   .vacancy__slider.des{
     display: none;
@@ -2354,7 +2391,7 @@ $grid-gutter-width: 32px;
     .card__img{
       height: 62px;
     }
-    .swiper-slide{
+    .swiper-slide.card{
       transform: scale(0.95);
       min-width: 246px;
       max-width: 246px;
@@ -2393,3 +2430,4 @@ $grid-gutter-width: 32px;
     }
   }
 }
+
