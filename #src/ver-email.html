@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>title</title>
+</head>
+
+<body>
+    <div class="auth">
+    <div class="wrapper">
+        <div class="content">
+            <header class="auth__header">
+                <div class="container container--auth">
+                    <a href="index.html" class="auth__logo">
+                        <img src="img/logo-mobile.svg" alt="">
+                        ExpertLand
+                    </a>
+                </div>
+            </header>
+            <div class="auth__wrap">
+                <div class="container">
+                    <h1>Войдите в личный кабинет
+                    </h1>
+                    <div class="auth__desc">Введите адрес электронной почты и пароль.</div>
+                    <form class="auth__form auth__form--big">
+                        <div class="auth__form__title">Ввведите 4-значный код, отправленный на ваш электронный адрес</div>
+                        
+                        <div class="pincode">
+                            <input type="text" class="pincode__input">
+                            <input type="text" class="pincode__input">
+                            <input type="text" class="pincode__input">
+                            <input type="text" class="pincode__input">
+                            <input type="hidden" class="hidden-input" name="pincode">
+                        </div>
+                        <div class="resend-code">
+                            <a href="" class="resend-code__time">Отправить код заново (25 секунд)</a>
+                            <a href="" class="resend-code__change">Изменить e-mail</a>
+                        </div>
+                        <div class="auth-bot-btns">
+                            <a href="" class="prev-btn">Назад</a>
+                            <a href="" class="next-btn">Подтвердить</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/auth.min.js"></script>
+</body>
+  
+</html>
