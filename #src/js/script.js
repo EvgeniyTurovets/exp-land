@@ -1,21 +1,25 @@
 // dropdown menu
 let burgerBtn = document.querySelector('.burger');
 let headerMenu = document.querySelector('.header__list');
-
-burgerBtn.onclick = function () {
-  burgerBtn.classList.toggle('active');
-  headerMenu.classList.toggle('active');
+if(burgerBtn){
+  burgerBtn.onclick = function () {
+    burgerBtn.classList.toggle('active');
+    headerMenu.classList.toggle('active');
+  }
 }
+
 
 
 // lang dropdown
 let langBtn = document.querySelector('.lang__btn');
 let langList = document.querySelector('.lang__list');
-
-langBtn.onclick = function () {
-  langBtn.classList.toggle('active');
-  langList.classList.toggle('active');
+if(langBtn){
+  langBtn.onclick = function () {
+    langBtn.classList.toggle('active');
+    langList.classList.toggle('active');
+  }
 }
+
 
 
 // transfer lang dropdown
@@ -122,16 +126,20 @@ let tabBtnTwo = document.querySelector('.tab--two');
 
 let tabItemOne = document.querySelector('.tab__wrapper--one');
 let tabItemTwo = document.querySelector('.tab__wrapper--two');
-
-tabBtnOne.onclick = function () {
-  tabItemTwo.classList.remove('active');
-  tabItemOne.classList.add('active');
+if(tabBtnOne){
+  tabBtnOne.onclick = function () {
+    tabItemTwo.classList.remove('active');
+    tabItemOne.classList.add('active');
+  }
 }
 
-tabBtnTwo.onclick = function () {
-  tabItemOne.classList.remove('active');
-  tabItemTwo.classList.add('active');
+if(tabBtnTwo){
+  tabBtnTwo.onclick = function () {
+    tabItemOne.classList.remove('active');
+    tabItemTwo.classList.add('active');
+  }
 }
+
 
 // slider best
 const bestSlider = new Swiper('.best__slider', {
@@ -203,3 +211,4 @@ var scene = new ScrollMagic.Scene({triggerElement: "#vacancy__slider", duration:
       $('#vacancy__slider__row2').removeClass('active')
     }
   });
+

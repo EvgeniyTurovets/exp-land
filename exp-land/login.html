@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>title</title>
+</head>
+
+<body>
+    <div class="auth">
+    <div class="wrapper">
+        <div class="content">
+            <header class="auth__header">
+                <div class="container container--auth">
+                    <a href="index.html" class="auth__logo">
+                        <img src="img/logo-mobile.svg" alt="">
+                        ExpertLand
+                    </a>
+                </div>
+            </header>
+            <div class="auth__wrap">
+                <div class="container">
+                    <h1>Войдите в личный кабинет
+                    </h1>
+                    <div class="auth__desc">Введите адрес электронной почты и пароль.</div>
+                    <form class="auth__form">
+                        <a type="button" class="auth__form__close">
+                            <div>
+                                <svg class="icon">
+                                    <use xlink:href="./img/sprite.svg#close"></use>
+                                </svg>
+                            </div>
+                        </a>
+                        <div class="auth__form__title">Вход</div>
+                        <div class="input__row">
+                            <input type="email" placeholder="Email адрес">
+                        </div>
+                        <div class="input__row input__row--pass">
+                            <input type="password" placeholder="Пароль">
+                            <button type="button">
+                                <svg class="hide">
+                                    <use xlink:href="./img/sprite.svg#pass-show"></use>
+                                </svg>
+                                <svg class="show">
+                                    <use xlink:href="./img/sprite.svg#pass-hide"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="checkbox">
+                            <div>
+                                Забыли пароль? <a href="">Восстановите </a> доступ. 
+                            </div>
+                        </div>
+                        <button class="auth__submit" type="submit">Регистрация</button>
+                        <div class="auth__form__text auth__form__text--right">Нет аккаунта?  <a href="">Зарегистрируйтесь.</a></div>
+                        <div class="auth__reg-width">
+                            <a href="" class="auth__reg-width__google">
+                                <div class="img">
+                                    <svg id="google" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="./img/sprite.svg#google"></use>
+                                    </svg>
+                                </div>
+                                
+                                Продолжить с  Google</a>
+                            <a href="" class="auth__reg-width__fb">
+                                <div class="img white">
+                                    <img src="./img/auth/fb.svg">
+                                </div>
+                              
+                                Продолжить с  Facebook</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/auth.min.js"></script>
+</body>
+  
+</html>

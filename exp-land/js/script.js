@@ -4,19 +4,23 @@
 var burgerBtn = document.querySelector('.burger');
 var headerMenu = document.querySelector('.header__list');
 
-burgerBtn.onclick = function () {
-  burgerBtn.classList.toggle('active');
-  headerMenu.classList.toggle('active');
-}; // lang dropdown
+if (burgerBtn) {
+  burgerBtn.onclick = function () {
+    burgerBtn.classList.toggle('active');
+    headerMenu.classList.toggle('active');
+  };
+} // lang dropdown
 
 
 var langBtn = document.querySelector('.lang__btn');
 var langList = document.querySelector('.lang__list');
 
-langBtn.onclick = function () {
-  langBtn.classList.toggle('active');
-  langList.classList.toggle('active');
-}; // transfer lang dropdown
+if (langBtn) {
+  langBtn.onclick = function () {
+    langBtn.classList.toggle('active');
+    langList.classList.toggle('active');
+  };
+} // transfer lang dropdown
 
 
 if (document.documentElement.clientWidth < 768) {
@@ -109,15 +113,19 @@ var tabBtnTwo = document.querySelector('.tab--two');
 var tabItemOne = document.querySelector('.tab__wrapper--one');
 var tabItemTwo = document.querySelector('.tab__wrapper--two');
 
-tabBtnOne.onclick = function () {
-  tabItemTwo.classList.remove('active');
-  tabItemOne.classList.add('active');
-};
+if (tabBtnOne) {
+  tabBtnOne.onclick = function () {
+    tabItemTwo.classList.remove('active');
+    tabItemOne.classList.add('active');
+  };
+}
 
-tabBtnTwo.onclick = function () {
-  tabItemOne.classList.remove('active');
-  tabItemTwo.classList.add('active');
-}; // slider best
+if (tabBtnTwo) {
+  tabBtnTwo.onclick = function () {
+    tabItemOne.classList.remove('active');
+    tabItemTwo.classList.add('active');
+  };
+} // slider best
 
 
 var bestSlider = new Swiper('.best__slider', {
