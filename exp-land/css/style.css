@@ -3051,6 +3051,16 @@ a.auth__reg-width__fb {
   opacity: 0.8;
 }
 
+.ver-form-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
 @media (min-width: 992px) {
   .vacancy__slider__row.effect {
     position: absolute;
