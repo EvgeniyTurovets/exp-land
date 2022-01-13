@@ -487,3 +487,121 @@ a.auth__reg-width__fb{
         padding-top: 35px;
     }
 }
+
+.auth-choose{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 38px;
+}
+.auth-choose__col{
+    width: 100%;
+    max-width: 522px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-choose__item{
+    background: #FFFFFF;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    flex: 1;
+}
+.auth-choose__img{
+    padding-bottom: 50%;
+    background-size: cover;
+    background-position: center;
+}
+.auth-choose__wrap{
+    padding: 40px 49px 78px;
+    min-height: 296px;
+}
+.auth-choose__t{
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 125%;
+    color: #0A243F;
+    margin-bottom: 22px;
+}
+.auth-choose__t2{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: -0.015em;
+    color: #022964;
+    margin-bottom: 16px;
+}
+.auth-choose__t3{
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.015em;
+    color: #0A243F;
+}
+.auth-choose__bot{
+    display: flex;
+    justify-content: center;
+}
+.btn-auth{
+    background: #0F47C0;
+    border-radius: 20px;
+    padding: 8px 15px;
+    min-width: 240px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 160%;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+    transition: 0.3s all;
+}
+.btn-auth:hover{
+    opacity: 0.8;
+    color: #FFFFFF;
+}
+
+@media(max-width: 1199px){
+    .auth-choose__col{
+        max-width: 450px;
+    }
+    .auth-choose__wrap{
+        padding: 30px 30px 60px;
+    }
+}
+@media(max-width: 991px){
+    .auth-choose__col{
+        max-width: 325px;
+    }
+    .auth-choose__wrap{
+        padding: 25px 20px 40px;
+        min-height: 265px;
+    }
+    .auth-choose__t{
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+    .auth-choose__t2{
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    .auth-choose__t3{
+        font-size: 16px;
+    }
+    .btn-auth{
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 767px){
+    .auth-choose{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+    }
+  
+    .btn-auth{
+        font-size: 16px;
+    }
+    .auth-choose__item{
+        margin-bottom: 20px;
+    }   
+}
