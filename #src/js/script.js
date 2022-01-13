@@ -1,3 +1,4 @@
+$(document).ready(function(){
 // dropdown menu
 let burgerBtn = document.querySelector('.burger');
 let headerMenu = document.querySelector('.header__list');
@@ -23,33 +24,52 @@ if(langBtn){
 
 
 // transfer lang dropdown
-if (document.documentElement.clientWidth < 768) {
-  let langParent = document.querySelector('.lang');
-  let langWrapper = document.querySelector('.lang__wrapper');
+function transferLonIn(){
+  if (document.documentElement.clientWidth <= 480) {
+    $('.log-in-wraper').prepend($('.authorization__log-in'))
+  }else{
+    $('.authorization').prepend($('.authorization__log-in'))
+  }
 
-  langWrapper.prepend(langParent);
+  if (document.documentElement.clientWidth < 768) {
+    let langParent = document.querySelector('.lang');
+    let langWrapper = document.querySelector('.lang__wrapper');
+  
+    langWrapper.prepend(langParent);
+    
+  }else{
+    $('.links').append($('.lang'))
+  }
+
+  if (document.documentElement.clientWidth < 992) {
+    let advantagesOne = document.querySelector('.advantages__title--one');
+    let advantagesTwo = document.querySelector('.advantages__title--two');
+    let advantagesFirst = document.querySelector('.advantages__first');
+    let advantagesSecond = document.querySelector('.advantages__second');
+  
+    advantagesFirst.prepend(advantagesOne);
+    advantagesSecond.prepend(advantagesTwo);
+  
+    let communityOne = document.querySelector('.community__title--one');
+    let communityTwo = document.querySelector('.community__title--two');
+    let communityFirst = document.querySelector('.community__first');
+    let communitySecond = document.querySelector('.community__second');
+  
+    communityFirst.prepend(communityOne);
+    communitySecond.prepend(communityTwo);
+  }
 }
-if (document.documentElement.clientWidth < 992) {
-  let advantagesOne = document.querySelector('.advantages__title--one');
-  let advantagesTwo = document.querySelector('.advantages__title--two');
-  let advantagesFirst = document.querySelector('.advantages__first');
-  let advantagesSecond = document.querySelector('.advantages__second');
+transferLonIn()
+$(window).on('resize', function(){
+  transferLonIn()
+})
 
-  advantagesFirst.prepend(advantagesOne);
-  advantagesSecond.prepend(advantagesTwo);
 
-  let communityOne = document.querySelector('.community__title--one');
-  let communityTwo = document.querySelector('.community__title--two');
-  let communityFirst = document.querySelector('.community__first');
-  let communitySecond = document.querySelector('.community__second');
 
-  communityFirst.prepend(communityOne);
-  communitySecond.prepend(communityTwo);
-}
 
 
 // animated tags
-(function ($) {
+if(function ($) {
   $.fn.fadeInDelay = function () {
     var init = function () {
       $(this).hide().delay($(this).data('delay')).fadeIn();
@@ -212,3 +232,4 @@ var scene = new ScrollMagic.Scene({triggerElement: "#vacancy__slider", duration:
     }
   });
 
+});

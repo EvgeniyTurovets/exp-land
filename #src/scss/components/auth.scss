@@ -53,13 +53,18 @@
 .auth__form__close{
     display: block;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
     padding: 5px;
     background-color: transparent;
     border: none;
     transition: 0.3s all;
+    div{
+        width: 20px;
+        height: 20px;
+    }
     svg{
+        display: block;
         width: 20px;
         height: 20px;
         path{
@@ -195,6 +200,7 @@
     justify-content: center;
     transition: 0.3s all;
     margin-bottom: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 .auth__submit:hover{
     opacity: 0.8;
@@ -238,6 +244,7 @@
     margin-top: 12px;
     position: relative;
     height: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
     
     .img{
         position: absolute;
@@ -261,6 +268,7 @@ a.auth__reg-width__google{
 a.auth__reg-width__fb{
     background-color: #D0DBFF;
     color: #0A243F;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
 }
 .auth__reg-width a:hover{
     opacity: 0.8;
@@ -492,6 +500,7 @@ a.auth__reg-width__fb{
     display: flex;
     justify-content: space-between;
     padding-top: 38px;
+    max-width: 1216px;
 }
 .auth-choose__col{
     width: 100%;
@@ -507,6 +516,11 @@ a.auth__reg-width__fb{
     overflow: hidden;
     margin-bottom: 32px;
     flex: 1;
+    transition: 0.3s all;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+.auth-choose__item:hover{
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
 }
 .auth-choose__img{
     padding-bottom: 50%;
@@ -553,6 +567,7 @@ a.auth__reg-width__fb{
     letter-spacing: -0.015em;
     color: #FFFFFF;
     transition: 0.3s all;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 .btn-auth:hover{
     opacity: 0.8;

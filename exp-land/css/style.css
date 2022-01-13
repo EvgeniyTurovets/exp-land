@@ -948,6 +948,7 @@ section {
 .preview__title {
   margin: 60px 0 0;
   font-weight: bold;
+  font-family: "Cabin", sans-serif;
   font-size: 64px;
   line-height: 68px;
 }
@@ -1454,6 +1455,10 @@ section {
   transition: all 0.3s ease;
 }
 
+.numbers__img.mob {
+  display: none;
+}
+
 .numbers__counter {
   margin-top: 32px;
   font-size: 64px;
@@ -1899,11 +1904,12 @@ section {
   padding: 5px 32px;
   font-weight: 600;
   font-size: 8px;
+  text-transform: uppercase;
   line-height: 14px;
   background-color: #fff;
   border-radius: 40px;
-  -webkit-box-shadow: 0px 0px 160px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 160px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .card__statistics {
@@ -1950,8 +1956,17 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: -o-linear-gradient(359.75deg, #000000 -20.34%, rgba(255, 255, 255, 0) 99.82%);
-  background: linear-gradient(90.25deg, #000000 -20.34%, rgba(255, 255, 255, 0) 99.82%);
+  background: -o-linear-gradient(359.75deg, #363636 -20.34%, #a5a5a531 99.82%);
+  background: linear-gradient(90.25deg, #363636 -20.34%, #a5a5a531 99.82%);
+}
+
+.tender::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .tender__title {
@@ -2271,8 +2286,8 @@ section {
 .auth__form__close {
   display: block;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   padding: 5px;
   background-color: transparent;
   border: none;
@@ -2281,7 +2296,13 @@ section {
   transition: 0.3s all;
 }
 
+.auth__form__close div {
+  width: 20px;
+  height: 20px;
+}
+
 .auth__form__close svg {
+  display: block;
   width: 20px;
   height: 20px;
 }
@@ -2482,6 +2503,8 @@ section {
   -o-transition: 0.3s all;
   transition: 0.3s all;
   margin-bottom: 16px;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .auth__submit:hover {
@@ -2540,6 +2563,8 @@ section {
   margin-top: 12px;
   position: relative;
   height: 40px;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .auth__reg-width a .img {
@@ -2570,6 +2595,8 @@ a.auth__reg-width__google {
 a.auth__reg-width__fb {
   background-color: #D0DBFF;
   color: #0A243F;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 .auth__reg-width a:hover {
@@ -2738,6 +2765,7 @@ a.auth__reg-width__fb {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 38px;
+  max-width: 1216px;
 }
 
 .auth-choose__col {
@@ -2761,6 +2789,16 @@ a.auth__reg-width__fb {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.auth-choose__item:hover {
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 .auth-choose__img {
@@ -2820,6 +2858,8 @@ a.auth__reg-width__fb {
   -webkit-transition: 0.3s all;
   -o-transition: 0.3s all;
   transition: 0.3s all;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .btn-auth:hover {
@@ -3839,7 +3879,7 @@ a.auth__reg-width__fb {
   }
 
   .btn-sec-small {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 18px;
   }
 
@@ -3874,7 +3914,7 @@ a.auth__reg-width__fb {
   }
 
   .preview__description {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 18px;
   }
 
@@ -3898,7 +3938,7 @@ a.auth__reg-width__fb {
   }
 
   .opportunities__description {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 18px;
   }
 
@@ -4126,7 +4166,7 @@ a.auth__reg-width__fb {
 
   .card__tag {
     margin: 12px 0 0 6px;
-    padding: 0 13px;
+    padding: 2px 13px;
     font-size: 8px;
     line-height: 14px;
   }
@@ -4245,6 +4285,7 @@ a.auth__reg-width__fb {
     height: 32px;
     padding: 6px 20px;
     font-size: 14px;
+    font-size: 14px;
     line-height: 20px;
     font-weight: 700;
   }
@@ -4262,7 +4303,7 @@ a.auth__reg-width__fb {
   }
 
   .vacancy__link {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 18px;
   }
 
@@ -4492,6 +4533,10 @@ a.auth__reg-width__fb {
             transform: scale(1);
   }
 
+  .become__link {
+    font-size: 14px;
+  }
+
   .auth h1 {
     line-height: 1.5;
     font-size: 32px;
@@ -4593,7 +4638,7 @@ a.auth__reg-width__fb {
 
 @media (max-width: 660px) {
   .vacancy .card__wrapper {
-    padding: 16px 9px 35px;
+    padding: 16px 9px 30px;
   }
 
   .vacancy .card__heading {
@@ -4630,12 +4675,14 @@ a.auth__reg-width__fb {
 
   .card__tag {
     margin-left: 0px;
-    margin-right: 6px;
+    margin-right: 5px;
     font-weight: 600;
     font-size: 6px;
     line-height: 14px;
     margin-bottom: 8px;
+    font-weight: 600;
     margin-top: 0;
+    padding: 0 13px;
     -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
             box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
   }
@@ -4650,8 +4697,9 @@ a.auth__reg-width__fb {
   }
 
   .link__arrow {
-    font-size: 40px;
+    font-size: 70px;
     margin-left: 0;
+    margin-top: 4px;
   }
 
   .vacancy .link {
@@ -4670,8 +4718,8 @@ a.auth__reg-width__fb {
   }
 
   .swiper-slide .opportunities__card {
-    min-width: 246px;
-    max-width: 246px;
+    min-width: 260px;
+    max-width: 260px;
   }
 
   .opportunities__link {
@@ -4792,6 +4840,21 @@ a.auth__reg-width__fb {
 }
 
 @media (max-width: 575px) {
+  .numbers__img {
+    display: none;
+  }
+
+  .numbers__img.mob {
+    display: block;
+  }
+
+  .numbers__counter {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 15px;
+  }
+
   .contests__title {
     margin: 54px 0 19px;
   }
@@ -4806,6 +4869,10 @@ a.auth__reg-width__fb {
   .vacancy__title {
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .tags__item {
+    margin-top: 8px;
   }
 
   .auth__form {
@@ -4875,7 +4942,7 @@ a.auth__reg-width__fb {
 
 @media (max-width: 480px) {
   .authorization__log-in {
-    display: none;
+    margin-top: 25px;
   }
 
   .numbers__name {
