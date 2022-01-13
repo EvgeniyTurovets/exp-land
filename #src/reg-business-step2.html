@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/selectize.default.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>title</title>
+</head>
+
+<body>
+    <div class="auth">
+        <div class="wrapper">
+            <div class="content">
+                <header class="auth__header">
+                    <div class="container container--auth">
+                        <a href="index.html" class="auth__logo">
+                            <img src="img/logo-mobile.svg" alt="">
+                            ExpertLand
+                        </a>
+                    </div>
+                </header>
+                <div class="auth__wrap">
+                    <div class="container">
+                        <form class="auth__form auth__form--bb">
+                            <a href="" class="auth__form__close">
+                                <div>
+                                    <svg class="icon">
+                                        <use xlink:href="./img/sprite.svg#close"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                            <div class="auth__form--bb__wrap">
+                                <div class="auth__form__title">Регистрация  предпринимателя</div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="input__row">
+                                            <input placeholder="Имя">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input__row">
+                                            <input placeholder="Фамилия">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input__row">
+                                    <input placeholder="Название компании">
+                                </div>
+                                <div class="input__row">
+                                    <select class="js-selectize" name="sfera" placeholder="Колличество сотрудников">
+                                        <option value=""></option>
+                                        <option value="1">1-10 сотрудников</option>
+                                        <option value="2">10-50 сотрудников</option>	
+                                        <option value="3">50-200 сотрудников</option>	
+                                        <option value="4">200-500 сотрудников</option>	
+                                        <option value="5">500+ сотрудников</option>
+                                        
+                                    </select>
+                                </div>
+                                <div class="input__row">
+                                    <select class="js-selectize" name="sfera" placeholder="Страна">
+                                        <option value=""></option>
+                                        <option value="1">Агробизнес</option>
+                                        <option value="2">Образование</option>	
+                                        <option value="3">Продуктовый/непродуктовый ритейл</option>	
+                                        <option value="4">FMCG/ продукты питания/напитки/бытовая химия/табачные</option>	
+                                        <option value="5">Фармацевтика и медицина</option>
+                                        <option value="6">Телеком и связь</option>
+                                        <option value="7">Архитектура/девелопмент/дизайн/ремонт/стройматериалы</option>	
+                                        <option value="8">Транспортная и складская логистика, перевозки</option>	
+                                        <option value="9">IT и бизнес</option>	
+                                    </select>
+                                </div>
+                                <div class="input__row">
+                                    <select class="js-selectize" name="sfera" placeholder="Город">
+                                        <option value=""></option>
+                                        <option value="1">Агробизнес</option>
+                                        <option value="2">Образование</option>	
+                                        <option value="3">Продуктовый/непродуктовый ритейл</option>	
+                                        <option value="4">FMCG/ продукты питания/напитки/бытовая химия/табачные</option>	
+                                        <option value="5">Фармацевтика и медицина</option>
+                                        <option value="6">Телеком и связь</option>
+                                        <option value="7">Архитектура/девелопмент/дизайн/ремонт/стройматериалы</option>	
+                                        <option value="8">Транспортная и складская логистика, перевозки</option>	
+                                        <option value="9">IT и бизнес</option>	
+                                    </select>
+                                </div>
+                                
+                                <div class="auth-bot-btns">
+                                    <a href="" class="prev-btn">Назад</a>
+                                    <a href="" class="next-btn" data-bs-toggle="modal" data-bs-target="#modalSenk">Продолжить</a>
+                                </div>
+                            </div>
+                            <div class="auth__form__text  auth__form__text--right">
+                                <a href="">Зарегистрироваться как эксперт</a>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Модалка "Такая компания уже зарегистрирована"
+        </button>
+  
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal__wrap">
+                    <button type="button" data-bs-dismiss="modal" class="auth__form__close modal-close">
+                        <div>
+                            <svg class="icon">
+                                <use xlink:href="./img/sprite.svg#close"></use>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="modal__title">Такая компания уже зарегистрирована</div>
+                    <div class="modal__text">Вы можете запросить приглашение для участия в команде</div>
+                    <a href="javascript:" class="btn btn-auth" data-bs-toggle="modal" data-bs-target="#exampleModal2">Запросить приглашение</a>
+                    <button type="button" data-bs-dismiss="modal" class="modal-back">Назад</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal__wrap">
+                    <div class="modal__wrap-senk">
+                        <div class="modal__title">Спасибо!</div>
+                        <div class="modal__text">Ваш запрос успешно отправлен. Ожидайте подтверждения от компании</div>
+                        <a href="" class="btn btn-auth">Вернуться на главную</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalSenk" tabindex="-1" aria-labelledby="modalSenk" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal__wrap">
+                    <button type="button" data-bs-dismiss="modal" class="auth__form__close modal-close">
+                        <div>
+                            <svg class="icon">
+                                <use xlink:href="./img/sprite.svg#close"></use>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="modal__title">Спасибо за регистрацию!</div>
+                    <div class="modal__text">Заполните профиль, чтобы участвовать в поиске исполнителей или участвовать в рейтинге как эксперт. 
+                    </div>
+                    <a href="" class="btn btn-auth">Перейти к профилю</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/microplugin.js"></script>
+    <script src="js/sifter.min.js"></script>
+    <script src="js/selectize.min.js"></script>
+    <script src="js/auth.min.js"></script>
+</body>
+  
+</html>
