@@ -662,6 +662,7 @@ section {
           justify-content: flex-end;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  width: 285px;
 }
 
 .authorization__log-in {
@@ -686,7 +687,7 @@ section {
 }
 
 .header {
-  margin-top: 66px;
+  margin-top: 72px;
 }
 
 .header .header__fix {
@@ -745,6 +746,11 @@ section {
   -o-transition: all linear 0.3s;
   transition: all linear 0.3s;
   z-index: -1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .header__link {
@@ -1310,9 +1316,9 @@ section {
 }
 
 .opportunities__card:hover {
-  -webkit-transform: scale(1.01);
-      -ms-transform: scale(1.01);
-          transform: scale(1.01);
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
   -webkit-box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.15);
 }
@@ -1681,6 +1687,7 @@ section {
 .best {
   padding: 120px 0;
   background-color: #0F47C0;
+  overflow: hidden;
 }
 
 .best__container {
@@ -1710,6 +1717,7 @@ section {
 }
 
 .best__slider {
+  overflow: visible;
   padding: 126px 0 96px;
 }
 
@@ -2508,7 +2516,7 @@ section {
 }
 
 .auth__submit:hover {
-  opacity: 0.8;
+  background-color: #092C9E;
 }
 
 .auth__form__text {
@@ -2590,6 +2598,14 @@ section {
 
 a.auth__reg-width__google {
   background-color: #141A66;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+a.auth__reg-width__google:hover {
+  background-color: #13185f;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 a.auth__reg-width__fb {
@@ -2599,8 +2615,10 @@ a.auth__reg-width__fb {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
 }
 
-.auth__reg-width a:hover {
-  opacity: 0.8;
+a.auth__reg-width__fb:hover {
+  background-color: #ccd6f7;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 .auth__form--big {
@@ -2754,7 +2772,7 @@ a.auth__reg-width__fb {
 }
 
 .auth-bot-btns .next-btn:hover {
-  opacity: 0.8;
+  background: #092C9E;
 }
 
 .auth-choose {
@@ -2766,6 +2784,7 @@ a.auth__reg-width__fb {
           justify-content: space-between;
   padding-top: 38px;
   max-width: 1216px;
+  margin: 0 auto;
 }
 
 .auth-choose__col {
@@ -2863,7 +2882,7 @@ a.auth__reg-width__fb {
 }
 
 .btn-auth:hover {
-  opacity: 0.8;
+  background-color: #092C9E;
   color: #FFFFFF;
 }
 
@@ -2886,6 +2905,7 @@ a.auth__reg-width__fb {
 
 .selectize-control.single .selectize-input.dropdown-active {
   border-radius: 20px 20px 0 0;
+  border: 2px solid #2B5CFB;
 }
 
 .selectize-input > input {
@@ -3101,6 +3121,18 @@ a.auth__reg-width__fb {
   margin-bottom: 50px;
 }
 
+@media (min-width: 480px) {
+  .log-in-wraper {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .lang__wrapper {
+    display: none;
+  }
+}
+
 @media (min-width: 992px) {
   .vacancy__slider__row.effect {
     position: absolute;
@@ -3145,6 +3177,10 @@ a.auth__reg-width__fb {
 }
 
 @media (max-width: 1399px) {
+  .authorization {
+    width: 250px;
+  }
+
   .header__link {
     font-size: 13px;
     line-height: 19px;
@@ -4327,6 +4363,10 @@ a.auth__reg-width__fb {
     margin-top: 50px;
   }
 
+  .authorization {
+    width: auto;
+  }
+
   .header__wrapper {
     height: 50px;
   }
@@ -4873,6 +4913,74 @@ a.auth__reg-width__fb {
 
   .tags__item {
     margin-top: 8px;
+  }
+
+  .numbers__title {
+    font-size: 10vw;
+    line-height: 1.1;
+  }
+
+  .best__slider {
+    margin-top: 0px;
+  }
+
+  .card__top {
+    padding-top: 13px;
+  }
+
+  .card__experience {
+    margin-top: 12px;
+    margin-left: 3px;
+  }
+
+  .card__wrapper {
+    padding: 18px 9px 24px;
+  }
+
+  .card__tag {
+    padding: 0 5px;
+    min-width: 68px;
+    text-align: center;
+  }
+
+  .best__slider .card__statistics-icon {
+    font-weight: 400;
+  }
+
+  .best__slider .card__statistics {
+    margin-top: 5px;
+    font-size: 8px;
+    line-height: 10px;
+  }
+
+  .vacancy .card__statistics {
+    padding-left: 4px;
+  }
+
+  .card__statistics-icon {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .vacancy .card__statistics.b {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .vacancy .card__tag {
+    min-width: 59px;
+  }
+
+  .vacancy .card__tags {
+    margin-top: 14px;
+  }
+
+  .vacancy .link {
+    margin-top: 5px;
+  }
+
+  .vacancy .card__wrapper {
+    padding-bottom: 25px;
   }
 
   .auth__form {

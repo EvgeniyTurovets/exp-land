@@ -1,7 +1,8 @@
 "use strict";
 
 $(document).ready(function () {
-  // dropdown menu
+  new WOW().init(); // dropdown menu
+
   var burgerBtn = document.querySelector('.burger');
   var headerMenu = document.querySelector('.header__list');
 

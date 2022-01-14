@@ -203,7 +203,7 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 .auth__submit:hover{
-    opacity: 0.8;
+    background-color: #092C9E;
 }
 .auth__form__text{
     font-size: 12px;
@@ -264,14 +264,20 @@
 }
 a.auth__reg-width__google{
     background-color: #141A66;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+a.auth__reg-width__google:hover{
+    background-color: #13185f;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
 a.auth__reg-width__fb{
     background-color: #D0DBFF;
     color: #0A243F;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
 }
-.auth__reg-width a:hover{
-    opacity: 0.8;
+a.auth__reg-width__fb:hover{
+    background-color: #ccd6f7;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 @media(max-width: 767px){
@@ -431,7 +437,7 @@ a.auth__reg-width__fb{
         margin-left: 35px;
     }
     .next-btn:hover{
-        opacity: 0.8;
+        background: #092C9E;
     }
 }
 
@@ -501,6 +507,7 @@ a.auth__reg-width__fb{
     justify-content: space-between;
     padding-top: 38px;
     max-width: 1216px;
+    margin: 0 auto;
 }
 .auth-choose__col{
     width: 100%;
@@ -570,7 +577,7 @@ a.auth__reg-width__fb{
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 .btn-auth:hover{
-    opacity: 0.8;
+    background-color: #092C9E;
     color: #FFFFFF;
 }
 
@@ -634,6 +641,7 @@ a.auth__reg-width__fb{
 }
 .selectize-control.single .selectize-input.dropdown-active{
     border-radius: 20px 20px 0 0;
+    border: 2px solid #2B5CFB
 }
 .selectize-input>input{
     font-size: 15px;

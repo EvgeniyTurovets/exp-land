@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+new WOW().init();
 // dropdown menu
 let burgerBtn = document.querySelector('.burger');
 let headerMenu = document.querySelector('.header__list');
