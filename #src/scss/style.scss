@@ -2555,5 +2555,85 @@ section{
   }
   
 }
+.preview__video{
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: -250px;
+  bottom: 0;
+  top: 0;
+  max-width: initial;
+  width: auto;
+  video{
+    width: 100%;
+    display: none;
+  }
+}
+.preview__video{
+  @media(min-width: 1600px){
+    .video-xxl{
+      display: block;
+    }
+  }
+  @media(min-width: 1400px){
+    .video-xl{
+      display: block;
+    }
+  }
+  @media(min-width: 992px){
+    .video-lg{
+      display: block;
+    }
+  }
+  @media(min-width: 768px){
+    .video-md{
+      display: block;
+    }
+  }
+  @media(min-width: 320px){
+    .video-sm{
+      display: block;
+    }
+  }
+}
+
+@media(max-width: 1700px){
+  .preview__video{
+    right: -75px;
+  }
+}
+@media(max-width: 1600px){
+  .preview__video{
+    right: -45px;
+  }
+}
+
+@media(max-width: 991px){
+  .preview__video{
+    right: 0;
+    video{
+      margin-left: auto;
+      width: auto;
+      height: 100%
+    }
+  }
+}
+@media(max-width: 767px){
+  .preview__video{
+    position: relative;
+    width: 100%;
+    height: 323px;
+    overflow: hidden;
+    video{
+      height: 520px;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%)
+    }
+  }
+  
+}
 // pages
 @import "./components/auth";

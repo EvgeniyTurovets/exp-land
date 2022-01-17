@@ -235,3 +235,4 @@ var scene = new ScrollMagic.Scene({triggerElement: "#vacancy__slider", duration:
   });
 
 });
+
