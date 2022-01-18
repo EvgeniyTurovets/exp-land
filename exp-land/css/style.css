@@ -2251,7 +2251,8 @@ section {
 }
 
 .preview__video video {
-  width: 100%;
+  margin-left: auto;
+  max-width: 100%;
   display: none;
 }
 
@@ -3148,19 +3149,11 @@ a.auth__reg-width__fb:hover {
     display: none;
   }
 
-  .preview__content {
-    opacity: 0;
-    -webkit-transition: 0.3s ease-in;
-    -o-transition: 0.3s ease-in;
-    transition: 0.3s ease-in;
-  }
-
-  .preview.active .preview__content {
-    opacity: 1;
-  }
-
-  .preview__right {
-    opacity: 0;
+  .preview__video {
+    right: 0;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    transition: 0.5s all;
   }
 }
 
@@ -3184,6 +3177,21 @@ a.auth__reg-width__fb:hover {
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
             transform: translateY(0);
+  }
+
+  .preview__content {
+    opacity: 0;
+    -webkit-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+  }
+
+  .preview.active .preview__content {
+    opacity: 1;
+  }
+
+  .preview__right {
+    opacity: 0;
   }
 
   .preview__video {

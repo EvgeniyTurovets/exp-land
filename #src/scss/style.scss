@@ -2568,7 +2568,8 @@ section{
   max-width: initial;
   width: auto;
   video{
-    width: 100%;
+    margin-left: auto;
+    max-width: 100%;
     display: none;
   }
 }
@@ -2638,7 +2639,7 @@ section{
   }
   
 }
-@media(min-width: 768px){
+@media(min-width: 992px){
   .preview__content{
     opacity: 0;
     transition: 0.3s ease-in;
@@ -2655,9 +2656,9 @@ section{
     right: 0;
     transition: 0.5s all;
   }
-  .preview.active .preview__video{
-    right: -45px;
-  }
+  // .preview.active .preview__video{
+  //   right: -45px;
+  // }
 }
 //
 @media(min-width: 992px){
@@ -2689,5 +2690,4 @@ section{
 }
 
 
- pages
 @import "./components/auth";
