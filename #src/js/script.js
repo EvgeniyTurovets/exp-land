@@ -2,9 +2,9 @@ $(document).ready(function(){
 
   new WOW().init();
 
-  if($(window).width() > 767){
+  if($(window).width() > 991){
     setTimeout(function(){
-      $('.preview__content').addClass('active')
+      $('.preview').addClass('active')
     },3000)
     
   }
