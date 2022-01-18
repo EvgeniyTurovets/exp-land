@@ -3137,12 +3137,6 @@ a.auth__reg-width__fb:hover {
   margin-bottom: 50px;
 }
 
-@media (min-width: 320px) {
-  .preview__video .video-sm {
-    display: block;
-  }
-}
-
 @media (min-width: 480px) {
   .log-in-wraper {
     display: none;
@@ -3154,8 +3148,19 @@ a.auth__reg-width__fb:hover {
     display: none;
   }
 
-  .preview__video .video-md {
-    display: block;
+  .preview__content {
+    opacity: 0;
+    -webkit-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+  }
+
+  .preview.active .preview__content {
+    opacity: 1;
+  }
+
+  .preview__right {
+    opacity: 0;
   }
 }
 
@@ -3179,25 +3184,6 @@ a.auth__reg-width__fb:hover {
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
             transform: translateY(0);
-  }
-
-  .preview__video .video-lg {
-    display: block;
-  }
-
-  .preview__content {
-    opacity: 0;
-    -webkit-transition: 0.3s ease-in;
-    -o-transition: 0.3s ease-in;
-    transition: 0.3s ease-in;
-  }
-
-  .preview.active .preview__content {
-    opacity: 1;
-  }
-
-  .preview__right {
-    opacity: 0;
   }
 
   .preview__video {
@@ -3237,10 +3223,6 @@ a.auth__reg-width__fb:hover {
 }
 
 @media (min-width: 1600px) {
-  .preview__video .video-xxl {
-    display: block;
-  }
-
   .preview__video {
     right: 0;
     -webkit-transition: 0.5s all;
@@ -3619,10 +3601,6 @@ a.auth__reg-width__fb:hover {
 }
 
 @media (max-width: 991px) {
-  .preview__video {
-    display: none;
-  }
-
   .links__list {
     overflow-x: scroll;
   }
@@ -3702,7 +3680,7 @@ a.auth__reg-width__fb:hover {
     height: 56px;
   }
 
-  .expert-card__salary {
+  .expert-card__inner .expert-card__salary {
     padding: 2px 7px 1px 8px;
     font-size: 6px;
     line-height: 7px;
@@ -4614,7 +4592,7 @@ a.auth__reg-width__fb:hover {
     height: 38px;
   }
 
-  .expert-card__salary {
+  .expert-card__inner .expert-card__salary {
     left: 36px;
     font-size: 6px;
     line-height: 6px;
@@ -5189,5 +5167,23 @@ a.auth__reg-width__fb:hover {
 
   .numbers__name {
     max-width: 62px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+  .preview__video .video-lg {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .preview__video .video-md {
+    display: block;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .preview__video .video-sm {
+    display: block;
   }
 }

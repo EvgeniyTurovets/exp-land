@@ -45,11 +45,7 @@ section{
   z-index: 1;
 }
 
-@media(max-width: 991px){
-  .preview__video{
-    display: none;
-  }
-}
+
 .authorization {
   display: flex;
   align-items: center;
@@ -755,7 +751,7 @@ section{
     width: 56px;
     height: 56px;
   }
-  .expert-card__salary {
+  .expert-card__inner .expert-card__salary {
     padding: 2px 7px 1px 8px;
     font-size: 6px;
     line-height: 7px;
@@ -832,7 +828,7 @@ section{
     width: 38px;
     height: 38px;
   }
-  .expert-card__salary {
+  .expert-card__inner .expert-card__salary {
     left: 36px;
     font-size: 6px;
     line-height: 6px;
@@ -2577,27 +2573,27 @@ section{
   }
 }
 .preview__video{
-  @media(min-width: 1600px){
-    .video-xxl{
-      display: block;
-    }
-  }
+  // @media(min-width: 1600px){
+  //   .video-xxl{
+  //     display: block;
+  //   }
+  // }
   @media(min-width: 1400px){
     .video-xl{
       display: block;
     }
   }
-  @media(min-width: 992px){
+  @media(min-width: 992px) and (max-width: 1399px){
     .video-lg{
       display: block;
     }
   }
-  @media(min-width: 768px){
+  @media(min-width: 768px) and (max-width: 991px){
     .video-md{
       display: block;
     }
   }
-  @media(min-width: 320px){
+  @media(min-width: 320px) and (max-width: 767px){
     .video-sm{
       display: block;
     }
@@ -2642,7 +2638,7 @@ section{
   }
   
 }
-@media(min-width: 992px){
+@media(min-width: 768px){
   .preview__content{
     opacity: 0;
     transition: 0.3s ease-in;
@@ -2654,13 +2650,23 @@ section{
     opacity: 0;
   }
 }
-@media(min-width: 1700px){
+@media(min-width: 768px){
   .preview__video{
     right: 0;
     transition: 0.5s all;
   }
   .preview.active .preview__video{
-    right: -250px;
+    right: -45px;
+  }
+}
+//
+@media(min-width: 992px){
+  .preview__video{
+    right: 0;
+    transition: 0.5s all;
+  }
+  .preview.active .preview__video{
+    right: -45px;
   }
 }
 @media(min-width: 1600px){
@@ -2672,14 +2678,16 @@ section{
     right: -75px;
   }
 }
-@media(min-width: 992px){
+@media(min-width: 1700px){
   .preview__video{
     right: 0;
     transition: 0.5s all;
   }
   .preview.active .preview__video{
-    right: -45px;
+    right: -250px;
   }
 }
-// pages
+
+
+ pages
 @import "./components/auth";
