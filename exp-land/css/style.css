@@ -3157,6 +3157,17 @@ a.auth__reg-width__fb:hover {
   .preview__video .video-md {
     display: block;
   }
+
+  .preview__content {
+    opacity: 0;
+    -webkit-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+  }
+
+  .preview__content.active {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 992px) {

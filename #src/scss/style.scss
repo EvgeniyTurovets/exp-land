@@ -2560,6 +2560,7 @@ section{
   z-index: 1;
   left: 0;
   right: -250px;
+  // left: -250px;
   bottom: 0;
   top: 0;
   max-width: initial;
@@ -2634,6 +2635,16 @@ section{
     }
   }
   
+}
+
+@media(min-width: 768px){
+  .preview__content{
+    opacity: 0;
+    transition: 0.3s ease-in;
+  }
+  .preview__content.active{
+    opacity: 1;
+  }
 }
 // pages
 @import "./components/auth";

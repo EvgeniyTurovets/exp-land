@@ -1,7 +1,14 @@
 "use strict";
 
 $(document).ready(function () {
-  new WOW().init(); // dropdown menu
+  new WOW().init();
+
+  if ($(window).width() > 767) {
+    setTimeout(function () {
+      $('.preview__content').addClass('active');
+    }, 3000);
+  } // dropdown menu
+
 
   var burgerBtn = document.querySelector('.burger');
   var headerMenu = document.querySelector('.header__list');
