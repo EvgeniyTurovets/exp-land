@@ -2615,10 +2615,11 @@ section{
 @media(max-width: 991px){
   .preview__video{
     right: 0;
+    overflow: hidden;
     video{
       margin-left: auto;
       width: auto;
-      height: 100%
+      height: 100%;
     }
   }
 }

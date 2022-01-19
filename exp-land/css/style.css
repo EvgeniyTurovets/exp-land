@@ -3949,6 +3949,7 @@ a.auth__reg-width__fb:hover {
 
   .preview__video {
     right: 0;
+    overflow: hidden;
   }
 
   .preview__video video {
