@@ -296,9 +296,11 @@ a.auth__reg-width__fb:hover{
 @media(max-width: 575px){
     .auth__form{
         padding: 45px 15px 40px;
+        margin-top: 30px;
     }
     .auth h1{
         font-size: 28px;
+        margin-bottom: 20px;
     }
     .auth .auth__desc{
         font-size: 16px;
